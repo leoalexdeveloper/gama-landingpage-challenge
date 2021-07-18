@@ -1,0 +1,61 @@
+/* 
+    company-name-logo 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+body > header{
+    
+    @include size(100%, auto);
+    background-image: linear-gradient(to top, rgba($body-header-color, 8%), rgba($body-header-color, 100%));
+    overflow: hidden;
+    padding: clamp(1rem, calc(1rem+1vw), 2rem);
+    @include flex(row, space-between, center, nowrap);
+    
+    @media(max-width: $breakpoint-768) and (orientation: portrait){
+        padding: clamp(0.5rem, calc(0.5rem+1vw), 1rem);
+        @include flex(column, space-between, center, nowrap);
+    }
+
+    & > .company-name{
+        @include size(auto, auto);
+        margin: auto;
+        @include flex(row, space-between, center, nowrap);
+        padding: clamp(1.5rem, calc(1.5rem+1vw), 2rem);
+
+        @media(max-width: $breakpoint-768){
+            justify-content: center;
+        }
+
+        & > h1{
+            @include font(
+                'Orbitron', sans-serif,
+                clamp(0.7rem, calc(0.7rem + 1vw), 2rem),
+                initial, 
+                initial, 
+                initial,
+                $company-name-color,
+                clamp(1rem, calc(1rem + 1vw), 2rem),
+                clamp(1rem, calc(1rem + 1vw), 2rem),
+            );
+            border-top:0.3rem dashed #DEDEDE;
+            border-bottom:0.3rem dashed #DEDEDE;
+            padding: clamp(0.5rem, calc(0.5rem+1vw), 1rem);
+        }
+    }
+
+    & > .black-friday-logo{
+        @include size(50%, auto);
+        display: flex;
+    
+        & > img{
+            margin: auto;
+            @include size(30%, auto);
+            @include object(cover, center);
+            
+
+            @media(max-width: $breakpoint-768){
+                @include size(100%, auto);
+            }
+        }
+    }
+}

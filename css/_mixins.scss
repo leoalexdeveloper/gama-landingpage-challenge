@@ -1,0 +1,41 @@
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin flex($d, $j, $a, $w){
+    display: flex;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+    flex-wrap: $w;
+}
+
+@mixin object($f, $p){
+    object-fit: $f;
+    object-position: $p;
+}
+
+@mixin font($ffa, $ffb, $fsi, $fst, $fva, $fwe, $fco, $lhe, $lsp){
+    font-family: $ffa, $ffb;
+    font-size: $fsi;
+    font-style: $fst;
+    font-variant: $fva;
+    font-weight: $fwe;
+    color: $fco;
+    line-height: $lhe;
+    letter-spacing: $lsp;
+}
+
+@mixin bk-img($path, $bs, $bp, $br){
+    background-image: url($path);
+    background-size: $bs;
+    background-position: $bp;
+    background-repeat: $br;
+}
+
+@mixin position($p, $va, $vv, $ha, $hv){
+    position: $p;
+    #{$va}:$vv;
+    #{$ha}:$hv;
+}

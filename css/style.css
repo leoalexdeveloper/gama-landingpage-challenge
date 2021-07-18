@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body > section {
+  overflow-x: hidden;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "body-main" "body-footer";
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-gap: 0 1rem 0 1rem;
+  position: relative;
+  background-color: white;
+}
+
+body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+body > section > main {
+  background-color: pink;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: body-main;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+body > section > footer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: body-footer;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+/* 
+    company-name-logo 
+*/
+body > header {
+  width: 100%;
+  height: auto;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#db6100), to(#db6100));
+  background-image: linear-gradient(to top, #db6100, #db6100);
+  overflow: hidden;
+  padding: clamp(1rem, calc(1rem+1vw), 2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  body > header {
+    padding: clamp(0.5rem, calc(0.5rem+1vw), 1rem);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+body > header > .company-name {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: clamp(1.5rem, calc(1.5rem+1vw), 2rem);
+}
+
+@media (max-width: 768px) {
+  body > header > .company-name {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body > header > .company-name > h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(0.7rem, calc(0.7rem + 1vw), 2rem);
+  font-style: initial;
+  font-variant: initial;
+  font-weight: initial;
+  color: #FFFCF9;
+  line-height: clamp(1rem, calc(1rem + 1vw), 2rem);
+  letter-spacing: clamp(1rem, calc(1rem + 1vw), 2rem);
+  border-top: 0.3rem dashed #DEDEDE;
+  border-bottom: 0.3rem dashed #DEDEDE;
+  padding: clamp(0.5rem, calc(0.5rem+1vw), 1rem);
+}
+
+body > header > .black-friday-logo {
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body > header > .black-friday-logo > img {
+  margin: auto;
+  width: 30%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (max-width: 768px) {
+  body > header > .black-friday-logo > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+body > section {
+  width: 100%;
+  height: auto;
+}
+
+body > section > main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+body > section > main > .banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  z-index: 1;
+  overflow: hidden;
+  padding: clamp(1rem, calc(1rem + 1vw), 2rem);
+  /* @media(max-width: $breakpoint-1024) and (orientation:landscape){
+                @include size(100%, auto);
+                @include flex(column, space-around, center, nowrap);
+                top: 25%;
+            } */
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  body > section > main > .banner {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  body > section > main > .banner {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  body > section > main > .banner {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+body > section > main > .banner > .form-container {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-width: 240px;
+  max-width: 40%;
+  max-height: 500px;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  body > section > main > .banner > .form-container {
+    max-width: 90%;
+  }
+}
+
+body > section > main > .banner > .form-container > h2 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.7rem, calc(0.7rem + 1vw), 1.2rem);
+  font-style: initial;
+  font-variant: initial;
+  font-weight: 600;
+  color: #dedede;
+  line-height: 1.5rem;
+  letter-spacing: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+  text-align: center;
+  background-color: #c25600;
+  padding: clamp(1rem, calc(1rem+1vw), 2rem);
+  border: 1px solid white;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  color: #dedede;
+}
+
+body > section > main > .banner > .form-container > form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.5rem, calc(0.5rem + 1vw), 1rem);
+  font-style: initial;
+  font-variant: initial;
+  font-weight: 900;
+  color: #FFFCF9;
+  line-height: clamp(1rem, calc(1rem + 1vw), 2rem);
+  letter-spacing: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+  z-index: 98;
+  padding: clamp(1.5rem, calc(1.5rem+1vw), 2rem);
+  background-color: rgba(20, 20, 20, 0.5);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+body > section > main > .banner > .form-container > form > div {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: clamp(0.5rem, calc(.5rem + 1vw), 1rem);
+}
+
+body > section > main > .banner > .form-container > form > div > label {
+  width: 100%;
+  height: auto;
+  font-weight: 200;
+  font-size: clamp(0.7rem, calc(0.7rem + 1vw), 1.2rem);
+  padding: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+}
+
+body > section > main > .banner > .form-container > form > div > input {
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.5rem, calc(0.5rem + 1vw), 1rem);
+  font-style: initial;
+  font-variant: initial;
+  font-weight: 100;
+  color: #FFFCF9;
+  line-height: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+  letter-spacing: clamp(0.1rem, calc(0.1rem + 1vw), 0.2rem);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 0.1rem solid #FFFCF9;
+}
+
+body > section > main > .banner > .form-container > form > div > input[type="text"] {
+  width: 100%;
+  height: auto;
+  padding: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+}
+
+body > section > main > .banner > .form-container > form > div > input[type="email"] {
+  width: 100%;
+  height: auto;
+  padding: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+}
+
+body > section > main > .banner > .form-container > form > div > input[type="submit"] {
+  width: 100%;
+  height: auto;
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.4rem, calc(0.5rem + 1vw), 1rem);
+  font-style: initial;
+  font-variant: initial;
+  font-weight: 900;
+  color: #DEDEDE;
+  line-height: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+  letter-spacing: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+  border: none;
+  border-radius: 5px;
+  background-color: #c25600;
+  padding: clamp(1rem, calc(1rem + 1vw), 2rem);
+  cursor: pointer;
+}
+
+body > section > main > .banner > .shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+body > section > main > .banner > .black-friday-banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-color: black;
+}
+
+body > section > main > .banner > .banner-slide {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 45vh;
+  z-index: 98;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  body > section > main > .banner > .banner-slide {
+    width: 50%;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  body > section > main > .banner > .banner-slide {
+    width: 90%;
+    height: 30%;
+  }
+}
+
+body > section > main > .banner > .banner-slide > .banner-slide-arrow-left, body > section > main > .banner > .banner-slide .banner-slide-arrow-right {
+  font-size: clamp(1rem, calc(1rem + 1vw), 2rem);
+  font-weight: 900;
+  width: 10%;
+  height: 100%;
+  display: table-cell;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  color: #DEDEDE;
+  opacity: 0.5;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 99;
+}
+
+body > section > main > .banner > .banner-slide > .banner-slide-arrow-left:hover, body > section > main > .banner > .banner-slide .banner-slide-arrow-right:hover {
+  opacity: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body > section > main > .banner > .banner-slide > .banner-slide-arrow-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body > section > main > .banner > .banner-slide > .banner-slide-arrow-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+body > section > main > .banner > .banner-slide > .banner-slide-picture-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  margin-left: -100%;
+}
+
+body > section > main > .banner > .banner-slide > .banner-slide-picture-container > .black-friday-banner-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: auto;
+  display: inline;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  background-color: black;
+  border: 1px solid white;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+
+body > section .removeTransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+body > section > footer {
+  width: 100%;
+  height: auto;
+  background-color: #db6100;
+}
+
+body > section > footer > p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(0.7rem, calc(0.7rem + 1vw), 1.2rem);
+  font-style: initial;
+  font-variant: initial;
+  font-weight: 600;
+  color: #393939;
+  line-height: 1.5rem;
+  letter-spacing: clamp(0.2rem, calc(0.2rem + 1vw), 0.5rem);
+  padding: clamp(1rem, calc(1rem + 1vw), 2rem);
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

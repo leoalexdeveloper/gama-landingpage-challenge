@@ -1,0 +1,29 @@
+body > section{
+    overflow-x: hidden;
+    display: grid;
+    grid-template-areas: "body-main"
+                         "body-footer";
+    grid-template-columns: 100%;
+    
+    grid-gap: 0 1rem 0 1rem;
+    position: relative;
+    background-color: white;
+}
+
+body > header{
+    @include position(fixed, top, 0, left, 0);
+    z-index: 9999;
+}
+
+body > section > main{
+    background-color: pink;
+    grid-area: body-main;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+body > section > footer{
+    grid-area: body-footer;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
