@@ -171,13 +171,12 @@ window.onload = () => {
         user.push(new User(name, email));
         window.localStorage.setItem('subscribe-user', JSON.stringify(user));
 
-        confirmToSend();
+        confirmToSend(name, email);
    }
 
-   async function confirmToSend(){
-       let data = await JSON.parse(localStorage.getItem('subscribe-user'));
+   async function confirmToSend(name, email){
         
-       let confirmar = await confirm('Confirma o envio das seguintes informações: \n\n Nome: ' + data.name + ' \n E-mail: ' + data.email);
+       let confirmar = await confirm('Confirma o envio das seguintes informações: \n\n Nome: ' + name + ' \n E-mail: ' + email);
 
        (confirmar) ? alert('Parabéns! \n Você agora está inscrito!') : alert('Caso mude de idéia você pode voltar e realizar sua inscrição.');
 
