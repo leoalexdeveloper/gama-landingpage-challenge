@@ -174,9 +174,9 @@ window.onload = () => {
         confirmToSend(name, email);
    }
 
-   async function confirmToSend(name, email){
+    function confirmToSend(name, email){
         
-       let confirmar = await confirm('Confirma o envio das seguintes informações: \n\n Nome: ' + name + ' \n E-mail: ' + email);
+       let confirmar = confirm('Confirma o envio das seguintes informações: \n\n Nome: ' + name + ' \n E-mail: ' + email);
 
        (confirmar) ? alert('Parabéns! \n Você agora está inscrito!') : alert('Caso mude de idéia você pode voltar e realizar sua inscrição.');
 
